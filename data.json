@@ -1,0 +1,74 @@
+{
+    "nodes": [
+        {
+            "id": "intro",
+            "label": "INTRO",
+            "type": "intro"
+        },
+        {
+            "id": "core_cs",
+            "label": "CORE\n\nCOMPUTER SCIENCE",
+            "type": "core"
+        },
+        {
+            "id": "informatics",
+            "label": "INFORMATICS",
+            "type": "core"
+        },
+        {
+            "id": "electives_cs",
+            "label": "ELECTIVES",
+            "type": "electives"
+        },
+        {
+            "id": "core_se",
+            "label": "CORE\n\nSOFTWARE ENGINEERING",
+            "type": "core"
+        },
+        {
+            "id": "data_science",
+            "label": "DATA SCIENCE",
+            "type": "core"
+        },
+        {
+            "id": "electives_se",
+            "label": "ELECTIVES",
+            "type": "electives"
+        },
+        {
+            "id": "gator_it_department",
+            "label": "Gator IT Department",
+            "type": "intro"
+        }
+    ],
+    "edges": [
+        {
+            "source": "gator_it_department",
+            "target": "intro"
+        },
+        {
+            "source": "gator_it_department",
+            "target": "core_cs"
+        },
+        {
+            "source": "gator_it_department",
+            "target": "core_se"
+        },
+        {
+            "source": "core_cs",
+            "target": "informatics"
+        },
+        {
+            "source": "core_se",
+            "target": "data_science"
+        },
+        {
+            "source": "core_cs",
+            "target": "electives_cs"
+        },
+        {
+            "source": "core_se",
+            "target": "electives_se"
+        }
+    ]
+}
