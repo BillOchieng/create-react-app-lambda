@@ -4,18 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Scheduling Advising Platform</title>
+    <title>COURSE BUTTONS</title>
     <!-- Include Vue.js library -->
-    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
-    <!-- Include compiled JavaScript file -->
-    <script src="path/to/app.1234.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Include CSS file (optional) -->
     <link rel="stylesheet" href="path/to/styles.css">
+    <style>
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button-container button {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Place the Vue.js component -->
-    <div id="app"></div>
+    <div id="app">
+        <div class="button-container">
+            <button @click="toggleEntity('CoreCourses')">Computer Science</button>
+            <button @click="toggleEntity('IntroCourses')">Data Science</button>
+            <button @click="toggleEntity('ElectiveCourses')">Software Engineering</button>
+            <button @click="toggleEntity('Projects')">Informatics</button>
+        </div>
+        <div v-if="isEntitySelected('CoreCourses')" style="background-color: gold; padding: 10px;">
+            <h2>CoreCourses</h2>
+            <ul>
+                <li>CMPSC 200</li>
+                <li>CMPSC 300</li>
+            </ul>
+            <button @click="toggleBox('CMPSC 200')">Toggle CMPSC 200</button>
+            <p v-show="showBox('CMPSC 200')">This is CMPSC 200</p>
+        </div>
+        <div v-if="isEntitySelected('IntroCourses')" style="background-color: gold; padding: 10px;">
+            <h2>IntroCourses</h2>
+            <ul>
+                <li>CMPSC 400</li>
+                <li>CMPSC 500</li>
+            </ul>
+            <button @click="toggleBox('CMPSC 400')">Toggle CMPSC 400</button>
+            <p v-show="showBox('CMPSC 400')">This is CMPSC 400</p>
+        </div>
+        <div v-if="isEntitySelected('ElectiveCourses')" style="background-color: gold; padding: 10px;">
+            <h2>ElectiveCourses</h2>
+            <ul>
+                <li>CMPSC 600</li>
+                <li>CMPSC 700</li>
+            </ul>
+            <button @click="toggleBox('CMPSC 600')">Toggle CMPSC 600</button>
+            <p v-show="showBox('CMPSC 600')">This is CMPSC 600</p>
+        </div>
+        <div v-if="isEntitySelected('Projects')" style="background-color: gold; padding: 10px;">
+            <h2>Projects</h2>
+            <ul>
+                <li>CMPSC 800</li>
+                <li>CMPSC 900</li>
+            </ul>
+            <button @click="toggleBox('CMPSC 800')">Toggle CMPSC 800</button>
+            <p v-show="showBox('CMPSC 800')">This is CMPSC 800</p>
+        </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    selectedEntity: null,
+                    visibleBoxes: [],
+                };
+            },
+            methods: {
+                toggleEntity(entity) {
+                    if (this.selectedEntity === entity) {
+                        this.selectedEntity = null;
+                    } else {
+                        this.selectedEntity = entity;
+                    }
+                },
+                isEntitySelected(entity) {
+                    return this.selectedEntity === entity;
+                },
+                toggleBox(box) {
+                    const index = this.visibleBoxes.indexOf(box);
+                    if (index !== -1) {
+                        this.visibleBoxes.splice(index, 1);
+                    } else {
+                        this.visibleBoxes.push(box);
+                    }
+                },
+                showBox(box) {
+                    return this.visibleBoxes.includes(box);
+                },
+            },
+        });
+
+        app.mount('#app');
+    </script>
 </body>
 
 </html>
