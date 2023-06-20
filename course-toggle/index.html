@@ -4,8 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Toggle</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>COURSE BUTTONS</title>
+    <!-- Include Vue.js library -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Include CSS file (optional) -->
+    <link rel="stylesheet" href="path/to/styles.css">
+    <style>
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button-container button {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            body {
+                background-color: #0b21ab;
+                font-family: Arial, sans-serif;
+            }
+
+            .button-container {
+                margin-bottom: 20px;
+            }
+
+            button {
+                background-color: #007bff;
+                color: #007fff;
+                border: none;
+                padding: 10px 20px;
+                margin-right: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+            .toggle-container {
+                background-color: #ffd700;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+            }
+
+            .toggle-container h2 {
+                margin-top: 0;
+                color: #007bff;
+            }
+
+            .toggle-container ul {
+                margin-top: 0;
+                padding-left: 20px;
+            }
+
+            .toggle-container li {
+                list-style-type: none;
+                margin-bottom: 5px;
+            }
+
+            .toggle-container p {
+                display: none;
+                color: #333;
+                margin-top: 10px;
+            }
+
+            .toggle-container p.show {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,15 +91,52 @@
             <button @click="toggleEntity('Projects')">Informatics</button>
             <button @click="toggleEntity('CMPSC200')">CMPSC 200</button>
         </div>
-        <div v-if="isEntitySelected('CoreCourses')" class="toggle-container">
-            <h2>CoreCourses</h2>
+        <div v-if="isEntitySelected('CoreCourses')" style="background-color: gold; padding: 10px;">
+            <h2>COURSES</h2>
+            <ul>
+                <li>
+                    <h3>FOUNDATION</h3>
+                    <p>Take all of the following three courses (12 credits):</p>
+                    <ul>
+                        <li>CMPSC 100 - Computational Expression Credits: 4</li>
+                        <li>CMPSC 101 - Data Structures Credits: 4</li>
+                        <li>CMPSC 102 - Discrete Structures Credits: 4</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>CORE</h3>
+                    <p>Take all of the following four courses (16 credits):</p>
+                    <ul>
+                        <li>CMPSC 200 - Computer Organization Credits: 4</li>
+                        <li>CMPSC 202 - Algorithm Analysis Credits: 4</li>
+                        <li>CMPSC 204 - Theoretical Machines Credits: 4</li>
+                        <li>CMPSC 406 - Internet of Things Credits: 4</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>ELECTIVE</h3>
+                    <p>Take two of the following four courses (8 credits):</p>
+                    <ul>
+                        <li>CMPSC 300 - Bioinformatics Credits: 4</li>
+                        <li>CMPSC 304 - Robotic Agents Credits: 4</li>
+                        <li>CMPSC 400 - Operating Systems Credits: 4</li>
+                        <li>CMPSC 403 - Computer Security Credits: 4</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>PROJECT</h3>
+                    <ul>
+                        <li>CMPSC 580 - Junior Seminar Credits: 4</li>
+                        <li>CMPSC 600 - Senior Thesis I Credits: 4</li>
+                        <li>CMPSC 610 - Senior Thesis II Credits: 4</li>
+                    </ul>
+                </li>
+            </ul>
+            <button @click="toggleBox('Courses')">Courses</button>
+            <p v-show="showBox('Courses')">COMPLETE CMPSC COURSE CATALOG
             <ul>
                 <li>CMPSC 200</li>
                 <li>CMPSC 300</li>
-            </ul>
-            <button @click="toggleBox('CoreCourses')">Toggle CoreCourses</button>
-            <p v-show="showBox('CoreCourses')" class="show">Take all of the following four courses (16 credits):
-            <ul>
                 <li>CMPSC 200 - Computer Organization Credits: 4</li>
                 <li>CMPSC 202 - Algorithm Analysis Credits: 4</li>
                 <li>CMPSC 204 - Theoretical Machines Credits: 4</li>
@@ -33,44 +144,73 @@
             </ul>
             </p>
         </div>
-        <div v-if="isEntitySelected('IntroCourses')" class="toggle-container">
+        <div v-if="isEntitySelected('IntroCourses')" style="background-color: gold; padding: 10px;">
             <h2>IntroCourses</h2>
             <ul>
                 <li>CMPSC 400</li>
                 <li>CMPSC 500</li>
             </ul>
             <button @click="toggleBox('CMPSC 400')">Toggle CMPSC 400</button>
-            <p v-show="showBox('CMPSC 400')" class="show">This is CMPSC 400</p>
+            <p v-show="showBox('CMPSC 400')">This is CMPSC 400</p>
         </div>
-        <div v-if="isEntitySelected('ElectiveCourses')" class="toggle-container">
+        <div v-if="isEntitySelected('ElectiveCourses')" style="background-color: gold; padding: 10px;">
             <h2>ElectiveCourses</h2>
             <ul>
                 <li>CMPSC 600</li>
                 <li>CMPSC 700</li>
             </ul>
             <button @click="toggleBox('CMPSC 600')">Toggle CMPSC 600</button>
-            <p v-show="showBox('CMPSC 600')" class="show">This is CMPSC 600</p>
+            <p v-show="showBox('CMPSC 600')">This is CMPSC 600</p>
         </div>
-        <div v-if="isEntitySelected('Projects')" class="toggle-container">
+        <div v-if="isEntitySelected('Projects')" style="background-color: gold; padding: 10px;">
             <h2>Projects</h2>
             <ul>
                 <li>CMPSC 800</li>
                 <li>CMPSC 900</li>
             </ul>
             <button @click="toggleBox('CMPSC 800')">Toggle CMPSC 800</button>
-            <p v-show="showBox('CMPSC 800')" class="show">This is CMPSC 800</p>
+            <p v-show="showBox('CMPSC 800')">This is CMPSC 800</p>
         </div>
-        <div v-if="isEntitySelected('CMPSC200')" class="toggle-container">
+        <div v-if="isEntitySelected('CMPSC200')" style="background-color: gold; padding: 10px;">
             <h2>CMPSC 200</h2>
             <ul>
                 <li>CMPSC 200 - Computer Organization Credits: 4</li>
             </ul>
             <button @click="toggleBox('CMPSC200')">Toggle CMPSC 200</button>
-            <p v-show="showBox('CMPSC200')" class="show">This is CMPSC 200</p>
+            <p v-show="showBox('CMPSC200')">This is CMPSC 200</p>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="script.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                selectedEntity: null,
+                openBoxes: {
+                    CoreCourses: false,
+                    'CMPSC 400': false,
+                    'CMPSC 600': false,
+                    'CMPSC 800': false,
+                    CMPSC200: false
+                }
+            },
+            methods: {
+                toggleEntity(entity) {
+                    this.selectedEntity = this.selectedEntity === entity ? null : entity;
+                },
+                isEntitySelected(entity) {
+                    return this.selectedEntity === entity;
+                },
+                toggleBox(box) {
+                    this.openBoxes[box] = !this.openBoxes[box];
+                },
+                showBox(box) {
+                    return this.openBoxes[box];
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
