@@ -92,7 +92,30 @@
             <button @click="toggleEntity('CMPSC200')">CMPSC 200</button>
         </div>
         <div v-if="isEntitySelected('CoreCourses')" style="background-color: gold; padding: 10px;">
-            <h2>COURSES</h2>
+            <P>
+                Professors Jumadinova (Chair), Bonham-Carter, Kapfhammer, Luman
+
+            <P>Computer Science focuses on computational theory and the rich interplay between computer hardware and
+                software. Students use scientific and design-centric approaches to solve computational problems and to
+                create and evaluate realistic computer and computer-based systems.
+
+                The study of computer science leads to and requires the ability to analyze ideas, to think logically,
+                and to communicate ideas clearly and concisely. In this way, study of computer science contributes to
+                the foundation of an excellent liberal arts education.
+
+                Computer Science Learning Outcomes
+                Demonstrate and be able to communicate the knowledge of data types, algorithms, and mathematical
+                principles behind discrete objects.
+                Use scientific and theoretical methods to design, implement, evaluate, deploy, improve, maintain, and
+                document software and hardware systems.
+                Apply and articulate key concepts from a specialization area where the interconnection between software
+                and hardware is important and evident.
+                Able to communicate technical details of the produced software and hardware artifacts both in writing
+                and orally.
+            </P>
+            </P>
+            <h2>Program Requirements</h2>
+
             <ul>
                 <li>
                     <h3>FOUNDATION</h3>
@@ -135,12 +158,18 @@
             <button @click="toggleBox('Courses')">Courses</button>
             <p v-show="showBox('Courses')">COMPLETE CMPSC COURSE CATALOG
             <ul>
-                <li>CMPSC 200</li>
-                <li>CMPSC 300</li>
+                <li>CMPSC 304 - Robotic Agents Credits: 4</li>
+                <li>CMPSC 400 - Operating Systems Credits: 4</li>
+                <li>CMPSC 403 - Computer Security Credits: 4</li>
+                <li>CMPSC 406 - Internet of Things Credits: 4</li>
                 <li>CMPSC 200 - Computer Organization Credits: 4</li>
                 <li>CMPSC 202 - Algorithm Analysis Credits: 4</li>
                 <li>CMPSC 204 - Theoretical Machines Credits: 4</li>
                 <li>CMPSC 406 - Internet of Things Credits: 4</li>
+                <li>CMPSC 100 - Computational Expression Credits: 4</li>
+                <li>CMPSC 101 - Data Abstraction Credits: 4</li>
+                <li>CMPSC 102 - Discrete Structures Credits: 4</li>
+
             </ul>
             </p>
         </div>
