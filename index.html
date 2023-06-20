@@ -29,84 +29,123 @@
 <body>
     <div id="app">
         <div class="button-container">
-            <button @click="toggleEntity('CoreCourses')">Computer Science</button>
+            <button @click="toggleEntity('Courses')">Computer Science</button>
             <button @click="toggleEntity('IntroCourses')">Data Science</button>
             <button @click="toggleEntity('ElectiveCourses')">Software Engineering</button>
             <button @click="toggleEntity('Projects')">Informatics</button>
+            <button @click="toggleEntity('CMPSC200')">CourseNO</button>
         </div>
-        <div v-if="isEntitySelected('CoreCourses')" style="background-color: gold; padding: 10px;">
-            <h2>CoreCourses</h2>
+        <div v-if="isEntitySelected('Courses')" style="background-color: gold; padding: 10px;">
+            <h2>COURSES</h2>
             <ul>
-                <li>CMPSC 200</li>
-                <li>CMPSC 300</li>
-            </ul>
-            <button @click="toggleBox('CMPSC 200')">Toggle CMPSC 200</button>
-            <p v-show="showBox('CMPSC 200')">This is CMPSC 200</p>
-        </div>
-        <div v-if="isEntitySelected('IntroCourses')" style="background-color: gold; padding: 10px;">
-            <h2>IntroCourses</h2>
-            <ul>
-                <li>CMPSC 400</li>
-                <li>CMPSC 500</li>
-            </ul>
-            <button @click="toggleBox('CMPSC 400')">Toggle CMPSC 400</button>
-            <p v-show="showBox('CMPSC 400')">This is CMPSC 400</p>
-        </div>
-        <div v-if="isEntitySelected('ElectiveCourses')" style="background-color: gold; padding: 10px;">
-            <h2>ElectiveCourses</h2>
-            <ul>
-                <li>CMPSC 600</li>
-                <li>CMPSC 700</li>
-            </ul>
-            <button @click="toggleBox('CMPSC 600')">Toggle CMPSC 600</button>
-            <p v-show="showBox('CMPSC 600')">This is CMPSC 600</p>
-        </div>
-        <div v-if="isEntitySelected('Projects')" style="background-color: gold; padding: 10px;">
-            <h2>Projects</h2>
-            <ul>
-                <li>CMPSC 800</li>
-                <li>CMPSC 900</li>
-            </ul>
-            <button @click="toggleBox('CMPSC 800')">Toggle CMPSC 800</button>
-            <p v-show="showBox('CMPSC 800')">This is CMPSC 800</p>
-        </div>
-    </div>
+                <h3> FOUNDATION </h3>
+                <p> Take all of the following three courses (12 credits): </p>
+                <ul>
+                    <li>CMPSC 100 - Computational Expression Credits: 4</li>
+                    <li>CMPSC 101 - Data Structures Credits: 4</li>
+                    <li>CMPSC 102 - Discrete Structures Credits: 4 </li>
+                </ul>
+                <h3>CORE</h3>
+                <p> Take all of the following four courses (16 credits): </p>
+                <ul>
+                    <li>200 - Computer Organization Credits: 4</li>
+                    <li>CMPSC 202 - Algorithm Analysis Credits: 4</li>
+                    <li>CMPSC 204 - Theoretical Machines Credits: 4</li>
+                    <li>CMPSC 406 - Internet of Things Credits: 4</li>
+                </ul>
+                <h3>ELECTIVE</h3>
 
-    <script>
-        const app = Vue.createApp({
-            data() {
-                return {
+                <p> Take two of the following four courses (8 credits):</p>
+
+                <li>CMPSC 300 - Bioinformatics Credits: 4</li>
+                <li>CMPSC 304 - Robotic Agents Credits: 4</li>
+                <li>CMPSC 400 - Operating Systems Credits: 4</li>
+                <li>CMPSC 403 - Computer Security Credits: 4</li>
+                <h3>PROJECT</h3>
+                <li>580 - Junior Seminar Credits: 4</li>
+                <li>CMPSC 600 - Senior Thesis I Credits: 4</li>
+                <li>CMPSC 610 - Senior Thesis II Credits: 4</li>
+            </ul>
+            <button @click="toggleBox('Courses')">Courses</button>
+            <p v-show="showBox('Courses')">Take all of the following four courses</p>
+            <ul>
+                <ul>
+                    <li>CMPSC 200 - Computer Organization Credits: 4</li>
+                    <li>CMPSC 202 - Algorithm Analysis Credits: 4</li>
+                    <li>CMPSC 204 - Theoretical Machines Credits: 4</li>
+                    <li>CMPSC 406 - Internet of Things Credits: 4</li>
+                </ul>
+            </ul>
+
+
+            <div v-if="isEntitySelected('IntroCourses')" style="background-color: gold; padding: 10px;">
+                <h2>IntroCourses</h2>
+                <ul>
+                    <li>CMPSC 400</li>
+                    <li>CMPSC 500</li>
+                </ul>
+                <button @click="toggleBox('CMPSC 400')">Toggle CMPSC 400</button>
+                <p v-show="showBox('CMPSC 400')">This is CMPSC 400</p>
+            </div>
+            <div v-if="isEntitySelected('ElectiveCourses')" style="background-color: gold; padding: 10px;">
+                <h2>ElectiveCourses</h2>
+                <ul>
+                    <li>CMPSC 600</li>
+                    <li>CMPSC 700</li>
+                </ul>
+                <button @click="toggleBox('CMPSC 600')">Toggle CMPSC 600</button>
+                <p v-show="showBox('CMPSC 600')">This is CMPSC 600</p>
+            </div>
+            <div v-if="isEntitySelected('Projects')" style="background-color: gold; padding: 10px;">
+                <h2>Projects</h2>
+                <ul>
+                    <li>CMPSC 800</li>
+                    <li>CMPSC 900</li>
+                </ul>
+                <button @click="toggleBox('CMPSC 800')">Toggle CMPSC 800</button>
+                <p v-show="showBox('CMPSC 800')">This is CMPSC 800</p>
+            </div>
+            <div v-if="isEntitySelected('CMPSC200')" style="background-color: gold; padding: 10px;">
+                <h2>CourseNO</h2>
+                <ul>
+                    <li>Computer Organization Credits</li>
+                </ul>
+                <button @click="toggleBox('CMPSC200')">Toggle CourseNO</button>
+                <p v-show="showBox('CMPSC200')">This is CMPSC 200</p>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
                     selectedEntity: null,
-                    visibleBoxes: [],
-                };
-            },
-            methods: {
-                toggleEntity(entity) {
-                    if (this.selectedEntity === entity) {
-                        this.selectedEntity = null;
-                    } else {
-                        this.selectedEntity = entity;
+                    openBoxes: {
+                        CoreCourses: false,
+                        'CMPSC 400': false,
+                        'CMPSC 600': false,
+                        'CMPSC 800': false,
+                        CMPSC200: false
                     }
                 },
-                isEntitySelected(entity) {
-                    return this.selectedEntity === entity;
-                },
-                toggleBox(box) {
-                    const index = this.visibleBoxes.indexOf(box);
-                    if (index !== -1) {
-                        this.visibleBoxes.splice(index, 1);
-                    } else {
-                        this.visibleBoxes.push(box);
+                methods: {
+                    toggleEntity(entity) {
+                        this.selectedEntity = this.selectedEntity === entity ? null : entity;
+                    },
+                    isEntitySelected(entity) {
+                        return this.selectedEntity === entity;
+                    },
+                    toggleBox(box) {
+                        this.openBoxes[box] = !this.openBoxes[box];
+                    },
+                    showBox(box) {
+                        return this.openBoxes[box];
                     }
-                },
-                showBox(box) {
-                    return this.visibleBoxes.includes(box);
-                },
-            },
-        });
+                }
+            });
+        </script>
 
-        app.mount('#app');
-    </script>
 </body>
 
 </html>
