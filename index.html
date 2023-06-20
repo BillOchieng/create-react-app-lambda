@@ -8,7 +8,7 @@
     <!-- Include Vue.js library -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Include CSS file (optional) -->
-    <link rel="stylesheet" href="path/to/styles.css">
+    <link rel="stylesheet" href="./style.css">
     <style>
         /* Responsive Styles */
         @media screen and (max-width: 600px) {
@@ -24,7 +24,7 @@
             }
 
             body {
-                background-color: #0b21ab;
+                background-color: #fff;
                 font-family: Arial, sans-serif;
             }
 
@@ -33,7 +33,7 @@
             }
 
             button {
-                background-color: #007bff;
+                background-color: #ff9900;
                 color: #007fff;
                 border: none;
                 padding: 10px 20px;
@@ -83,6 +83,7 @@
 </head>
 
 <body>
+    <a href="./public/cmpsc.html">Data</a>
     <div id="app">
         <div class="button-container">
             <button @click="toggleEntity('CoreCourses')">Computer Science</button>
@@ -114,47 +115,9 @@
                 and orally.
             </P>
             </P>
-            <h2>Program Requirements</h2>
+            <h2><a href="./public/cmpsc.html"> Program Requirements</a></h2>
 
-            <ul>
-                <li>
-                    <h3>FOUNDATION</h3>
-                    <p>Take all of the following three courses (12 credits):</p>
-                    <ul>
-                        <li>CMPSC 100 - Computational Expression Credits: 4</li>
-                        <li>CMPSC 101 - Data Structures Credits: 4</li>
-                        <li>CMPSC 102 - Discrete Structures Credits: 4</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>CORE</h3>
-                    <p>Take all of the following four courses (16 credits):</p>
-                    <ul>
-                        <li>CMPSC 200 - Computer Organization Credits: 4</li>
-                        <li>CMPSC 202 - Algorithm Analysis Credits: 4</li>
-                        <li>CMPSC 204 - Theoretical Machines Credits: 4</li>
-                        <li>CMPSC 406 - Internet of Things Credits: 4</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>ELECTIVE</h3>
-                    <p>Take two of the following four courses (8 credits):</p>
-                    <ul>
-                        <li>CMPSC 300 - Bioinformatics Credits: 4</li>
-                        <li>CMPSC 304 - Robotic Agents Credits: 4</li>
-                        <li>CMPSC 400 - Operating Systems Credits: 4</li>
-                        <li>CMPSC 403 - Computer Security Credits: 4</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>PROJECT</h3>
-                    <ul>
-                        <li>CMPSC 580 - Junior Seminar Credits: 4</li>
-                        <li>CMPSC 600 - Senior Thesis I Credits: 4</li>
-                        <li>CMPSC 610 - Senior Thesis II Credits: 4</li>
-                    </ul>
-                </li>
-            </ul>
+            <!---->
             <button @click="toggleBox('Courses')">Courses</button>
             <p v-show="showBox('Courses')">COMPLETE CMPSC COURSE CATALOG
             <ul>
