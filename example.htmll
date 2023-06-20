@@ -1,0 +1,60 @@
+<div id="app">
+    <div class="button-container">
+        <button @click="toggleEntity('CoreCourses')">Computer Science</button>
+        <button @click="toggleEntity('IntroCourses')">Data Science</button>
+        <button @click="toggleEntity('ElectiveCourses')">Software Engineering</button>
+        <button @click="toggleEntity('Projects')">Informatics</button>
+        <button @click="toggleEntity('CMPSC200')">CMPSC 200</button>
+    </div>
+    <div v-if="isEntitySelected('CoreCourses')" class="toggle-container">
+        <h2>CoreCourses</h2>
+        <ul>
+            <li>CMPSC 200</li>
+            <li>CMPSC 300</li>
+        </ul>
+        <button @click="toggleBox('CoreCourses')">Toggle CoreCourses</button>
+        <p v-show="showBox('CoreCourses')" class="show">Take all of the following four courses (16 credits):
+            <ul>
+                <li>CMPSC 200 - Computer Organization Credits: 4</li>
+                <li>CMPSC 202 - Algorithm Analysis Credits: 4</li>
+                <li>CMPSC 204 - Theoretical Machines Credits: 4</li>
+                <li>CMPSC 406 - Internet of Things Credits: 4</li>
+            </ul>
+        </p>
+    </div>
+    <div v-if="isEntitySelected('IntroCourses')" class="toggle-container">
+        <h2>IntroCourses</h2>
+        <ul>
+            <li>CMPSC 400</li>
+            <li>CMPSC 500</li>
+        </ul>
+        <button @click="toggleBox('CMPSC 400')">Toggle CMPSC 400</button>
+        <p v-show="showBox('CMPSC 400')" class="show">This is CMPSC 400</p>
+    </div>
+    <div v-if="isEntitySelected('ElectiveCourses')" class="toggle-container">
+        <h2>ElectiveCourses</h2>
+        <ul>
+            <li>CMPSC 600</li>
+            <li>CMPSC 700</li>
+        </ul>
+        <button @click="toggleBox('CMPSC 600')">Toggle CMPSC 600</button>
+        <p v-show="showBox('CMPSC 600')" class="show">This is CMPSC 600</p>
+    </div>
+    <div v-if="isEntitySelected('Projects')" class="toggle-container">
+        <h2>Projects</h2>
+        <ul>
+            <li>CMPSC 800</li>
+            <li>CMPSC 900</li>
+        </ul>
+        <button @click="toggleBox('CMPSC 800')">Toggle CMPSC 800</button>
+        <p v-show="showBox('CMPSC 800')" class="show">This is CMPSC 800</p>
+    </div>
+    <div v-if="isEntitySelected('CMPSC200')" class="toggle-container">
+        <h2>CMPSC 200</h2>
+        <ul>
+            <li>CMPSC 200 - Computer Organization Credits: 4</li>
+        </ul>
+        <button @click="toggleBox('CMPSC200')">Toggle CMPSC 200</button>
+        <p v-show="showBox('CMPSC200')" class="show">This is CMPSC 200</p>
+    </div>
+</div>
