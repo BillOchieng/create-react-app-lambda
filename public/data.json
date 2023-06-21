@@ -1,74 +1,756 @@
 {
-    "nodes": [
+    "courses": [
         {
-            "id": "intro",
-            "label": "INTRO",
-            "type": "intro"
+            "courseNumber": "RELST 180",
+            "courseName": "Computational Expression",
+            "Major": [
+                "Computer Science Major",
+                "Data Science Major",
+                "Informatics Major",
+                "Software Engineering Major"
+            ],
+            "Minor": [
+                "Computer Science Minor",
+                "Data Science Minor",
+                "Informatics Minor",
+                "Software Engineering Minor"
+            ],
+            "distributionRequirements": [
+                "ME",
+                "SP"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": [
+                    "Knowledge of elementary algebra"
+                ]
+            },
+            "unlocks": [
+                "CMPSC 101",
+                "CMPSC 102",
+                "CMPSC 300"
+            ],
+            "courseDescription": "An introduction to the principles of computer science with an emphasis on creative expression through the medium of a programming language. Participating in hands-on activities that often require teamwork, students learn the computational structures needed to solve problems and produce computational artifacts which address these problems in real-world contexts. Students also learn how to organize and document a program's source code so that it effectively communicates with the intended users and maintainers. Additionally, the introduction includes an overview of the discipline of computer science and computational thinking. During a weekly laboratory session students use industry-grade technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "foundation",
+            "dslevel": "foundation",
+            "dsSub": "",
+            "inflevel": "foundation",
+            "infSub": "",
+            "selevel": "foundation",
+            "topics": [
+                "Object-oriented programming (OOP)",
+                "Teamwork",
+                "Version control systems",
+                "Integrated development environments (IDE)",
+                "Iteration",
+                "Python programming",
+                "Functions",
+                "GitHub Flow",
+                "Markdown"
+            ],
+            "tools": [
+                "Python",
+                "VSCode",
+                "Git",
+                "GitHub"
+            ],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "id": "core_cs",
-            "label": "CORE\n\nCOMPUTER SCIENCE",
-            "type": "core"
+            "courseNumber": "RELST 200",
+            "courseName": "Discrete Structures",
+            "Major": [
+                "Computer Science Major"
+            ],
+            "Minor": [
+                "Computer Science Minor"
+            ],
+            "distributionRequirements": [
+                "QR",
+                "SP"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": [
+                    "CMPSC 100"
+                ]
+            },
+            "unlocks": [
+                "CMPSC 200",
+                "CMPSC 201",
+                "CMPSC 202",
+                "CMPSC 204",
+                "CMPSC 301",
+                "CMPSC 303",
+                "CMPSC 304"
+            ],
+            "courseDescription": "An introduction to the foundations of computer science with an emphasis on understanding the abstract structures used to represent discrete objects. Participating in hands-on activities that often require teamwork, students learn the computational methods and logical principles that they need to create and manipulate discrete objects in a programming environment. Students also learn how to write, organize, and document a program’s source code so that it is easily accessible to intended users of varied backgrounds. During a weekly laboratory session students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "foundation",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "",
+            "infSub": "",
+            "selevel": "",
+            "topics": [
+                "Boolean Logic",
+                "Statistical Analysis",
+                "Flow of Control",
+                "Teamwork",
+                "Graph Theory",
+                "Code Review",
+                "Algorithms",
+                "Continuous Deployment",
+                "Version Control Systems",
+                "Plotting"
+            ],
+            "tools": [
+                "Docker",
+                "Python",
+                "GatorGrader",
+                "SimPy",
+                "GitHub",
+                "Matplotlib"
+            ],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "id": "informatics",
-            "label": "INFORMATICS",
-            "type": "core"
+            "courseNumber": "CMPSC 200",
+            "courseName": "Computer Organization",
+            "Major": [
+                "Computer Science Major"
+            ],
+            "Minor": [
+                "Computer Science Minor"
+            ],
+            "distributionRequirements": [
+                "QR",
+                "SP"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": [
+                    "CMPSC 102"
+                ]
+            },
+            "unlocks": [
+                "CMPSC 400",
+                "CMPSC 403",
+                "CMPSC 406"
+            ],
+            "courseDescription": "A study of the low-level operation of computer systems. Participating in hands-on activities that often require teamwork, students investigate how computers process instructions in modern computers as information is encoded, stored, and executed in a machine’s physical structures. In addition to learning how to program in assembly and machine languages, students investigate the design and logical operation of processors and the mathematics of machine computation. During a weekly laboratory session, students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "core",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "",
+            "infSub": "",
+            "selevel": "",
+            "topics": [
+                "Object-oriented programming",
+                "Memory management",
+                "Declarative programming",
+                "Instruction set architectures (ISA)",
+                "Functional programming",
+                "Digital circuits",
+                "Low-level languages"
+            ],
+            "tools": [
+                "Docker",
+                "Verilog",
+                "C++",
+                "Assembly"
+            ],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "id": "electives_cs",
-            "label": "ELECTIVES",
-            "type": "electives"
+            "courseNumber": "CMPSC 104",
+            "courseName": "Document Engineering",
+            "Major": [
+                "Software Engineering Major"
+            ],
+            "Minor": [],
+            "distributionRequirements": [
+                "HE",
+                "SP"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [
+                "CMPSC 302"
+            ],
+            "courseDescription": "An introduction to creation of effective documents and documentation using industry-standard approaches to creating and treating 'documentation as code.' Participating in project-based and hands-on activities, students create purpose-driven digital writing with special attention to forms, formats, and conventions expected of contemporary technical communication. Students also gain experience with creating collaborative and ethically-consistent content working in a team-based setting. During a weekly laboratory session students employ contemporary software tools to complete technical documentation projects, reporting on their results through both written reflections and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "",
+            "infSub": "",
+            "selevel": "foundation",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "id": "core_se",
-            "label": "CORE\n\nSOFTWARE ENGINEERING",
-            "type": "core"
+            "courseNumber": "CMPSC 202",
+            "courseName": "Algorithm Analysis",
+            "Major": [
+                "Computer Science Major"
+            ],
+            "Minor": [
+                "Computer Science Minor"
+            ],
+            "distributionRequirements": [
+                "QR",
+                "SP"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [
+                    "CMPSC 101",
+                    "CMPSC 102"
+                ],
+                "allof": []
+            },
+            "unlocks": [
+                ""
+            ],
+            "courseDescription": "A study of fundamental methods for designing and implementing algorithms and analyzing their efficiency. While developing expertise in select models of computation and the key mathematical and experimental approaches to studying algorithm efficiency, students investigate different types of algorithms through hands-on activities that often require teamwork. Students also learn how to determine whether a problem can be efficiently solved by an algorithm that is implemented as a computer program. During a weekly laboratory session, students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "Core",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "",
+            "infSub": "",
+            "selevel": "",
+            "topics": [
+                "Teamwork",
+                "Memory Management",
+                "Code Review",
+                "Continuous Deployment",
+                "Algorithms",
+                "Time Complexity",
+                "Version Control Systems",
+                "Technical Writing"
+            ],
+            "tools": [
+                "Docker",
+                "LaTeX",
+                "Git",
+                "Python",
+                "GitHub",
+                "Travis CI",
+                "Java",
+                "Discord"
+            ],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "id": "data_science",
-            "label": "DATA SCIENCE",
-            "type": "core"
+            "courseNumber": "CMPSC 203",
+            "courseName": "Software Engineering",
+            "Major": [
+                "Software Engineering Major"
+            ],
+            "Minor": [
+                "Software Engineering Major"
+            ],
+            "distributionRequirements": [
+                "SB",
+                "SP"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": [
+                    "CMPSC 101"
+                ]
+            },
+            "unlocks": [
+                "CMPSC 404"
+            ],
+            "courseDescription": "A human-centric study of the principles used during the engineering of high-quality software systems. In addition to examining the human behaviors and social processes undergirding software development methodologies, students participate in teams tasked with designing, developing, and delivering a significant software application for a customer. During a weekly laboratory session, students use state-of-the-art software engineering, management, and communication tools to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "",
+            "infSub": "",
+            "selevel": "core",
+            "topics": [
+                "Project Management",
+                "Unit Testing",
+                "Debugging",
+                "Teamwork",
+                "Integration Testing",
+                "Fault Localization",
+                "Version Control Systems",
+                "Implementation",
+                "Linting",
+                "Technical Writing",
+                "Software Design",
+                "Static Analysis",
+                "Performance Assessment",
+                "Coverage Testing",
+                "Dynamic Analysis",
+                "Professional Communication",
+                "Open Source Software",
+                "User Studies",
+                "Flow of Control",
+                "Software Testing",
+                "Code Review",
+                "Requirements Gathering",
+                "Mutation Testing"
+            ],
+            "tools": [
+                "Git",
+                "GitHub",
+                "Markdown",
+                "pytest",
+                "Python"
+            ],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "id": "electives_se",
-            "label": "ELECTIVES",
-            "type": "electives"
+            "courseNumber": "CMPSC 204",
+            "courseName": "Theoretical Machines",
+            "Major": [
+                "Computer Science Major"
+            ],
+            "Minor": [
+                "Computer Science Minor"
+            ],
+            "distributionRequirements": [
+                "QR",
+                "SP"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": [
+                    "CMPSC 102"
+                ]
+            },
+            "unlocks": [],
+            "courseDescription": "A study of theoretical computer science concepts that addresses both the fundamental nature and limitations of computation and the ways in which to practically apply these insights. While using a machine-centered abstraction of computation implemented in a general-purpose programming language, students investigate what is computable and explore the categories and complexity of computational problems. Participating in hands-on activities that often require teamwork, students gain experience in the use of a programming language to characterize a problem solving strategy. During a weekly laboratory session, students use industry-grade technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "core",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "",
+            "infSub": "",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "id": "gator_it_department",
-            "label": "Gator IT Department",
-            "type": "intro"
-        }
-    ],
-    "edges": [
-        {
-            "source": "gator_it_department",
-            "target": "intro"
+            "courseNumber": "CMPSC 300",
+            "courseName": "Bioinformatics",
+            "Major": [
+                "Computer Science Major",
+                "Data Science Major",
+                "Informatics Major"
+            ],
+            "Minor": [
+                "Informatics Minor"
+            ],
+            "distributionRequirements": [
+                "QR",
+                "SP"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [
+                    "CMPSC 100",
+                    "BIO 221",
+                    "FSBIO 201"
+                ],
+                "allof": []
+            },
+            "unlocks": [],
+            "courseDescription": "An introduction to the development and application of methods, from the computational and information sciences, for the investigation of biological phenomena. In this interdisciplinary course, students integrate computational techniques with biological knowledge to develop and use analytical tools for extracting, organizing, and interpreting information from genetic sequence data. Often participating in team-based and hands-on activities, students implement and apply useful bioinformatics algorithms. During a weekly laboratory session students employ cutting-edge software tools and programming environments to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "elective",
+            "dslevel": "elective",
+            "dsSub": "",
+            "inflevel": "Module",
+            "infSub": "Health Informatics",
+            "selevel": "",
+            "topics": [
+                "Ethics",
+                "Sequence Alignment",
+                "Code Review",
+                "Philosophy of Biology",
+                "Databases",
+                "Mathematical Programming",
+                "Genetic Mutation",
+                "Bioinformatics",
+                "Gene Prediction",
+                "Data Modeling"
+            ],
+            "tools": [
+                "BLAST",
+                "UniProt",
+                "Docker",
+                "GatorGrader",
+                "GitHub"
+            ],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "source": "gator_it_department",
-            "target": "core_cs"
+            "courseNumber": "CMPSC 105",
+            "courseName": "Data Exploration",
+            "Major": [
+                "Informatics Major",
+                "Data Science Major"
+            ],
+            "Minor": [
+                "Data Science Minor"
+            ],
+            "credits": "4",
+            "distributionRequirements": [
+                "QR",
+                "SP"
+            ],
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [],
+            "courseDescription": "An introduction to the methods of collecting, exploring, transforming and visualizing data for storytelling. Often participating in team-based and hands-on activities, students learn how to use web platforms and dashboards to acquire, explore and investigate data to generate summarized key data insights using visual techniques. Students also apply open-source programming language to discover patterns in the data, test hypotheses, and check assumptions using graphical representations. During a weekly laboratory session, students employ cutting-edge software tools to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.",
+            "cslevel": "",
+            "dslevel": "Foundation",
+            "dsSub": "",
+            "inflevel": "Foundation",
+            "infSub": "",
+            "selevel": "Foundation",
+            "topics": [
+                "Teamwork",
+                "Data Structures",
+                "Recursion"
+            ],
+            "tools": [
+                "Docker",
+                "GitHub",
+                "Git"
+            ],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "source": "gator_it_department",
-            "target": "core_se"
+            "courseNumber": "COMM 256",
+            "courseName": "Politics and Communication",
+            "Major": [],
+            "Minor": [],
+            "distributionRequirements": [
+                "CL",
+                "SB"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [
+                "COMM 360"
+            ],
+            "courseDescription": "An inquiry into the relationship between communication and politics. Emphasis is placed on the potential of language to create, perpetuate, and alter patterns of political and cultural behavior. Students consider the influence of contemporary political discourse on our understandings of public policy, political and cultural institutions, social controversies, and everyday life.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "Module",
+            "infSub": "Polinformatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "source": "core_cs",
-            "target": "informatics"
+            "courseNumber": "COMM 360",
+            "courseName": "Comm and Civic Engagement",
+            "Major": [
+                ""
+            ],
+            "Minor": [
+                ""
+            ],
+            "distributionRequirements": [
+                "HE",
+                "CL"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [
+                    "COMM 120",
+                    "COMM 145"
+                ],
+                "allof": [
+                    "COMM 256",
+                    "Permission of the instructor"
+                ]
+            },
+            "unlocks": [],
+            "courseDescription": "An exploration of the ways communication enhances civic engagement in an ever-changing society. Students critically engage with models of civic engagement to better understand how they legitimize forms of communicative interaction, authorize who can and cannot speak, and set standards for what can be said and how. Students consider how they can affect change in their own communities and/or personal lives.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "Module",
+            "infSub": "Polinformatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "source": "core_se",
-            "target": "data_science"
+            "courseNumber": "POLSC 120",
+            "courseName": "Comparative Gov/Politics",
+            "Major": [
+                ""
+            ],
+            "Minor": [
+                ""
+            ],
+            "distributionRequirements": [
+                "IP",
+                "CL"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [
+                "POLSC 330"
+            ],
+            "courseDescription": "An introduction to the development of political institutions and the distribution and exercise of political power in selected western, communist and Third World countries. Special attention will be devoted to the impact of institutional and cultural patterns upon the quality of life in those countries.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "Module",
+            "infSub": "Polinformatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "source": "core_cs",
-            "target": "electives_cs"
+            "courseNumber": "POLSC 215",
+            "courseName": "Politics in Popular Culture",
+            "Major": [
+                ""
+            ],
+            "Minor": [
+                ""
+            ],
+            "distributionRequirements": [
+                "CL",
+                "SB"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [
+                "ART 287"
+            ],
+            "courseDescription": "An examination of how American popular culture intersects with American politics. We focus on the processes through which common forms of entertainment, advertising, and material consumption influence our political perceptions, values, and actions. Special emphasis is placed on how experiences with products of popular culture influence our understandings of and (in)actions toward others. Through class discussion and analytical papers, students identify, explain, and evaluate how the content of popular culture influences their political conduct and the political conduct of others.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "Project",
+            "infSub": "Polinformatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         },
         {
-            "source": "core_se",
-            "target": "electives_se"
+            "courseNumber": "POLSC 318",
+            "courseName": "Politics and the Media",
+            "Major": [],
+            "Minor": [],
+            "distributionRequirements": [
+                "SB",
+                "CL"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [],
+            "courseDescription": "An examination and evaluaiton of the role of mass media in American politics. Topics include: the legal framework which enshrouds freedom of the press, the newsmaking process, sources of potential bias, the development of investigative journalism, corporate ownership of the media, the role of the press in elections, the ipact of mass media on individual behavior and opinion formation, and the politics of entertainment, concluding with an exploration of the process by which the media have become a tool, indeed a weapon, in the contemporary U.S. process.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "Module",
+            "infSub": "Polinformatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
+        },
+        {
+            "courseNumber": "POLSC 321",
+            "courseName": "Urban Government and Politics",
+            "Major": [
+                ""
+            ],
+            "Minor": [
+                ""
+            ],
+            "distributionRequirements": [
+                "CL",
+                "SB"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [],
+            "courseDescription": "An examination of the political institutions and the policy-making processes in American cities. Emphasis is on the impact of historical and social conditions, institutional arrangements, and power relationships on significant problems facing urban areas, including metropolitan organization, taxing and spending, law enforcement, education, social welfare, and housing..",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "Module",
+            "infSub": "Polinformatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
+        },
+        {
+            "courseNumber": "POLSC 424",
+            "courseName": "Inequality and Social Policy",
+            "Major": [
+                ""
+            ],
+            "Minor": [
+                ""
+            ],
+            "distributionRequirements": [
+                "IP",
+                "PD"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [],
+            "courseDescription": "An examination of the politics of social policy in advanced industrial democracies. Focusing on questions of economic and gender inequality, we study the main components of welfare states in the United Kingdom, Germany, Sweden, Italy, and the United States. We examine fundamental differences in social policy, the consequences of diverging welfare regimes, sustainability of welfare policies, and popular support for welfare states across countries.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "Module",
+            "infSub": "Polinformatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
+        },
+        {
+            "courseNumber": "PHIL 210",
+            "courseName": "Oppression and Liberation",
+            "Major": [
+                ""
+            ],
+            "Minor": [
+                ""
+            ],
+            "distributionRequirements": [
+                "CL",
+                "PD"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [],
+                "allof": []
+            },
+            "unlocks": [],
+            "courseDescription": "An overview of analyses of oppression and theories of liberation generated by groups traditionally marginalized in the United States.",
+            "cslevel": "",
+            "dslevel": "Core",
+            "dsSub": "Ethics",
+            "inflevel": "Module",
+            "infSub": "Polinformatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
+        },
+        {
+            "courseNumber": "COMM 331",
+            "courseName": "Disease and Disability",
+            "Major": [
+                ""
+            ],
+            "Minor": [
+                ""
+            ],
+            "distributionRequirements": [
+                "PD",
+                "SB"
+            ],
+            "credits": "4",
+            "prerequisites": {
+                "anyof": [
+                    "Permission of the instructor"
+                ],
+                "allof": [
+                    "COMM 120",
+                    "COMM 256"
+                ]
+            },
+            "unlocks": [
+                "ART 287"
+            ],
+            "courseDescription": "Disease, Disability, and Difference in Popular Culture: An exploration of how American popular culture defines what it means to be healthy or normal in today's world. Students learn to analyze films, television, news, and other digital media to understand how such media sets expectations for dealing with illness, disability, or other divergences from social norms in a variety of ways. Prerequisite: One 100-level or 200-level COMM course; or permission of instructor.",
+            "cslevel": "",
+            "dslevel": "",
+            "dsSub": "",
+            "inflevel": "Module",
+            "infSub": "Health Informatics",
+            "selevel": "",
+            "topics": [],
+            "tools": [],
+            "lab": [],
+            "learningObjectives": [],
+            "learningOutcomes": []
         }
     ]
 }
